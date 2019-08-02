@@ -36,14 +36,14 @@ const navigate = (route) => {
 
 const Landing = ({history}) => (
     <>
-        {/* <ExpansionPanel
+        <ExpansionPanel
             linkText="General CSS"
             verticalMargin="both"
             //eslint-disable-next-line react/style-prop-object
             style="container"
         >
             <TextList items={items} onItemSelect={navigate}/>
-        </ExpansionPanel> */}
+        </ExpansionPanel>
 
         {/* <ExpansionPanel
             linkText="EDS Structure"
