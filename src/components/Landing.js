@@ -22,12 +22,12 @@ const hocItems = [
         content: 'Basic Structure',
         value: 'structure/basicStructure',
         iconType: <MapSvg />,
-    }
-    // {
-    //     content: 'Notifications',
-    //     value: 'structure/hoc/mainControls/notification',
-    //     iconType: <MapSvg />,
-    // },
+    },
+    {
+        content: 'Notifications',
+        value: 'structure/hoc/mainControls/notification',
+        iconType: <MapSvg />,
+    },
     // {
     //     content: 'Action Bar',
     //     value: 'structure/hoc/mainControls/actionBar',
