@@ -7,7 +7,8 @@ import Ex2 from '../components/Ex2';
 import Notifications from '../components/hoc/Notifications';
 
 import Page from '../containers/Page';
-import MainControls from '../containers/MainControls';
+import StructureWithHOC from '../containers/StructureWithHOC';
+import BasicStructure from '../components/BasicStructure';
 
 const BASE_URL = '/';
 
@@ -27,8 +28,11 @@ const getRoutes = () => {
             <IndexRoute component={Page} />
             <Route path="ex1" component={Ex1}/>
             <Route path="ex2" component={Ex2}/>
-            <Route path="hoc/mainControls" component={MainControls}>
-                <Route path="notification" component={Notifications} />
+            <Route path="structure" component={StructureWithHOC}>
+                <Route path="basicStructure" component={BasicStructure} />
+                <Route path="hoc/mainControls">
+                    <Route path="notification" component={Notifications} />
+                </Route>
             </Route>
             <Route path="*" onEnter={goToBaseUrl} />
         </Route>

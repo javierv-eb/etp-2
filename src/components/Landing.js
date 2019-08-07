@@ -10,24 +10,29 @@ const items = [
         value: 'ex1',
         iconType: <MapSvg />,
     },
-    // {
-    //     content: 'Grid exercise II',
-    //     value: 'ex2',
-    //     iconType: <MapSvg />,
-    // },
+    {
+        content: 'Grid exercise II',
+        value: 'ex2',
+        iconType: <MapSvg />,
+    },
 ];
 
 const hocItems = [
     {
-        content: 'Notifications',
-        value: 'hoc/mainControls/notification',
+        content: 'Basic Structure',
+        value: 'structure/basicStructure',
         iconType: <MapSvg />,
-    },
-    {
-        content: 'Action Bar',
-        value: 'hoc/mainControls/actionBar',
-        iconType: <MapSvg />,
-    },
+    }
+    // {
+    //     content: 'Notifications',
+    //     value: 'structure/hoc/mainControls/notification',
+    //     iconType: <MapSvg />,
+    // },
+    // {
+    //     content: 'Action Bar',
+    //     value: 'structure/hoc/mainControls/actionBar',
+    //     iconType: <MapSvg />,
+    // },
 ];
 
 const navigate = (route) => {
@@ -36,23 +41,23 @@ const navigate = (route) => {
 
 const Landing = ({history}) => (
     <>
-        {/* <ExpansionPanel
+        <ExpansionPanel
             linkText="General CSS"
             verticalMargin="both"
             //eslint-disable-next-line react/style-prop-object
             style="container"
         >
             <TextList items={items} onItemSelect={navigate}/>
-        </ExpansionPanel> */}
+        </ExpansionPanel>
 
-        {/* <ExpansionPanel
+        <ExpansionPanel
             linkText="EDS Structure"
             verticalMargin="both"
             //eslint-disable-next-line react/style-prop-object
             style="container"
         >
             <TextList items={hocItems} onItemSelect={navigate}/>
-        </ExpansionPanel>         */}
+        </ExpansionPanel>        
     </>
 );
 
