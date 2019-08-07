@@ -33,8 +33,8 @@ class App extends Component {
                 <Layout maxWidth="large" hasHorizontalGutters={true}>
                     <section className="eds-l-pad-top-10">
                         <div className="eds-align--space-between eds-l-pad-top-10">
-                            <Button
-                                style="fill"
+                        {/* eslint-disable-next-line */}
+                            <Button style="fill"
                                 onClick={() => this.handleMainNotification()}
                             >
                                 Show Notification

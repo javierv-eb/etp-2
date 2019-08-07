@@ -10,6 +10,8 @@ import Page from '../containers/Page';
 import StructureWithHOC from '../containers/StructureWithHOC';
 import BasicStructure from '../components/BasicStructure';
 import ActionBar from '../components/hoc/ActionBar';
+import OverlaySample from '../components/hoc/OverlaySample';
+import OverlaySampleDialog from '../components/hoc/OverlaySampleDialog';
 
 const BASE_URL = '/';
 
@@ -34,6 +36,10 @@ const getRoutes = () => {
                 <Route path="hoc/mainControls">
                     <Route path="notification" component={Notifications} />
                     <Route path="actionBar" component={ActionBar} />
+                </Route>
+                <Route path="hoc/overlayControls">
+                    <Route path="overlayModal" component={OverlaySample} />
+                    <Route path="overlayDialog" component={OverlaySampleDialog} />
                 </Route>
             </Route>
             <Route path="*" onEnter={goToBaseUrl} />

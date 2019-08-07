@@ -33,6 +33,16 @@ const hocItems = [
     //     value: 'structure/hoc/mainControls/actionBar',
     //     iconType: <MapSvg />,
     // },
+    // {
+    //     content: 'Overlay Modal',
+    //     value: 'structure/hoc/overlayControls/overlayModal',
+    //     iconType: <MapSvg />,
+    // },
+    // {
+    //     content: 'Overlay Dialog',
+    //     value: 'structure/hoc/overlayControls/overlayDialog',
+    //     iconType: <MapSvg />,
+    // }
 ];
 
 const navigate = (route) => {

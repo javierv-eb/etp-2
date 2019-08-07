@@ -11,6 +11,7 @@ const ActionBarContent = ({onCloseBar}) => (
     <div className="eds-avatar__background--has-border eds-g-cell eds-g-cell-1-1 eds-l-pad-top-2 eds-l-pad-vert-2">
         <div className="eds-align--space-around">
             <span className="eds-text-bm"> This is the action footer bar</span>
+            {/* eslint-disable-next-line */}
             <Button style="fill" onClick={() => onCloseBar()}>
                 Close Bar
             </Button>
@@ -45,6 +46,7 @@ class ActionBar extends Component {
                         onCloseBar={() => ({})}
                     />
                     <div className="eds-align--space-between eds-l-pad-top-10">
+                        {/* eslint-disable-next-line */}
                         <Button style="fill" onClick={() => this.handleShowActionBar()}>
                             Show ActionBar
                         </Button>

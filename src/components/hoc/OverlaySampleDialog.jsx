@@ -7,30 +7,27 @@ import flowRight from "lodash/flowRight";
 import addOverlayControls from "eventbrite_design_system/structure/hoc/addOverlayControls";
 import addMainControls from "eventbrite_design_system/structure/hoc/addMainControls";
 import addFocusDrawerControls from "eventbrite_design_system/structure/hoc/addFocusDrawerControls";
-import withMainControls from "eventbrite_design_system/structure/hoc/withMainControls";
+import withOverlayControls from "eventbrite_design_system/structure/hoc/withOverlayControls";
 import Button from "eventbrite_design_system/button/Button";
+import TrashSvg from "eventbrite_design_system/iconography/icons/TrashChunky";
 
 import "eventbrite_design_system/css/eds.css";
 
 class App extends Component {
-    handleShowActionBar = () => {
-        this.props.showMainBottomBar({
-            barContent: (
-                <div className="eds-avatar__background--has-border eds-g-cell eds-g-cell-1-1 eds-l-pad-top-2 eds-l-pad-vert-2">
-                    <div className="eds-align--space-around">
-                        <span className="eds-text-bm"> This is the action footer bar</span>
-                        {/* eslint-disable-next-line */}
-                        <Button style="fill" onClick={this.handleCloseActionBar}>
-                            Close Bar
-                        </Button>
-                    </div>
-                </div>
-            )
-        });
-    };
-    handleCloseActionBar = () => {
-        this.props.closeMainBottomBar();
-    };
+    handleShowOverlayDialog = () => {
+        this.props.showOverlay(
+            'dialog',
+            {
+                headerIconType: <TrashSvg />,
+                title: 'This is the title',
+                message: 'This is the internal notification message',
+                primaryText: 'Primary action',
+                primaryType: 'danger',
+                secondaryText: 'Secondary Action',
+                secondaryType: 'link',
+            }
+        );
+    }
     render() {
         return (
             <Structure hasIndependentScrolling {...this.props}>
@@ -38,11 +35,8 @@ class App extends Component {
                     <section className="eds-l-pad-top-10">
                         <div className="eds-align--space-between eds-l-pad-top-10">
                         {/* eslint-disable-next-line */}
-                            <Button style="fill" onClick={() => this.handleShowActionBar()}>
-                                Show ActionBar
-                            </Button>
-                            <Button onClick={() => this.handleCloseActionBar()}>
-                                Hide ActionBar
+                            <Button style="fill" onClick={() => this.handleShowOverlayDialog()}>
+                                Show Dialog!!!
                             </Button>
                         </div>
                     </section>
@@ -56,5 +50,5 @@ export default flowRight(
     addOverlayControls,
     addMainControls,
     addFocusDrawerControls,
-    withMainControls
+    withOverlayControls
 )(App);

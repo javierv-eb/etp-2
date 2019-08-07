@@ -41,6 +41,7 @@ class Notifications extends Component {
                         <span>This is an error notification </span>
                     </NotificationBar>
                     <div className="eds-align--space-between eds-l-pad-top-10">
+                    {/* eslint-disable-next-line */}
                         <Button style="fill" onClick={() => this.handleMainNotification()}>
                             Show Notification
                         </Button>

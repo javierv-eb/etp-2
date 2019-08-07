@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-import AlertChunkySvg from "eventbrite_design_system/iconography/icons/AlertChunky";
-import { TYPE_ERROR } from "eventbrite_design_system/notification/constants";
-
 import CodeSampler from './CodeSampler';
 //eslint-disable-next-line
 import Notificationjsx from '!raw-loader!./BasicStructure.jsx';

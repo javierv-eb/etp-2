@@ -11,7 +11,7 @@ const CodeSegment = ({code, show, onToggleCode, addExtraPadding}) => {
     }
     const jsx = show ? (
         <div className="eds-l-pad-top-4">
-            <SyntaxHighlighter language="javascript" style={darcula}>
+            <SyntaxHighlighter language="javascript|html" style={darcula}>
                 {code}
             </SyntaxHighlighter>
         </div>
