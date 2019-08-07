@@ -9,6 +9,7 @@ import Notifications from '../components/hoc/Notifications';
 import Page from '../containers/Page';
 import StructureWithHOC from '../containers/StructureWithHOC';
 import BasicStructure from '../components/BasicStructure';
+import ActionBar from '../components/hoc/ActionBar';
 
 const BASE_URL = '/';
 
@@ -32,6 +33,7 @@ const getRoutes = () => {
                 <Route path="basicStructure" component={BasicStructure} />
                 <Route path="hoc/mainControls">
                     <Route path="notification" component={Notifications} />
+                    <Route path="actionBar" component={ActionBar} />
                 </Route>
             </Route>
             <Route path="*" onEnter={goToBaseUrl} />
