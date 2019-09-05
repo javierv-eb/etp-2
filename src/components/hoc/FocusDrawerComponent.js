@@ -5,7 +5,7 @@ import {browserHistory} from 'react-router';
 
 class FocusDrawerComponent extends PureComponent {
     _handleCloseFocusDrawer = () => {
-        browserHistory.push('/routerStructure/hoc/focusDrawer');
+        browserHistory.goBack();
     }
     componentDidMount() {
         const {

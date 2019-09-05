@@ -12,7 +12,7 @@ import CrossSvg from 'eventbrite_design_system/iconography/icons/Cross';
 
 class MainControls extends Component {
     navigate = (route) => {
-        browserHistory.push('/');
+        browserHistory.goBack();
     }
 
     render() {
