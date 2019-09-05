@@ -12,14 +12,35 @@ import CrossSvg from 'eventbrite_design_system/iconography/icons/Cross';
 
 class MainControls extends Component {
     navigate = (route) => {
-        browserHistory.goBack();
+        browserHistory.push('/');
     }
 
     render() {
+        const {
+            focusDrawerContent,
+            focusDrawerTitle,
+            focusDrawerOptions,
+        } = this.props;
+        let nextFocusDrawerOptions;
+
+        if (focusDrawerContent) {
+            nextFocusDrawerOptions = {
+                ...focusDrawerOptions,
+                content: focusDrawerContent,
+                title: focusDrawerTitle,
+                hideClose: false,
+                isShown: !!focusDrawerContent,
+            };
+        } else {
+            nextFocusDrawerOptions = {
+                content: '',
+            };
+        }
         return (
             <Structure
                 hasIndependentScrolling
                 {...this.props}
+                focusDrawerOptions={nextFocusDrawerOptions}
             >
                 <Layout
                     maxWidth="large"

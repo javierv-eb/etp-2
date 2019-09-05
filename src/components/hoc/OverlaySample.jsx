@@ -44,7 +44,7 @@ class App extends Component {
                              </Button>
                         </div>
                     </div>
-            ),
+                ),
                 illustration: (
                     <Illustration
                         type={<BlueMoneyIllustrationSvg />}

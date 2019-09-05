@@ -8,10 +8,14 @@ import Notifications from '../components/hoc/Notifications';
 
 import Page from '../containers/Page';
 import StructureWithHOC from '../containers/StructureWithHOC';
+import StructureForFocusDrawer from '../containers/StructureForFocusDrawer';
 import BasicStructure from '../components/BasicStructure';
 import ActionBar from '../components/hoc/ActionBar';
 import OverlaySample from '../components/hoc/OverlaySample';
 import OverlaySampleDialog from '../components/hoc/OverlaySampleDialog';
+import FocusDrawer from '../components/hoc/FocusDrawer';
+import FocusDrawerAdvanced from '../components/hoc/FocusDrawerAdvanced';
+import FocusDrawerComponent from '../components/hoc/FocusDrawerComponent';
 
 const BASE_URL = '/';
 
@@ -20,6 +24,20 @@ export const getHistory = () => {
 
     return hasBrowserHistory ? browserHistory : createMemoryHistory();
 };
+
+const assembleComponentWithFocusDrawer = (focusDrawerTitle, focusDrawerContent, children) => {
+    const TitleComponent = () => (
+        <span className="eds-text-bl">{focusDrawerTitle || 'Sample title'}</span>
+    );
+
+    return {
+        mainContent: children,
+        focusDrawerContent,
+        focusDrawerTitle: TitleComponent
+    }
+};
+
+const focusDrawerBasic = assembleComponentWithFocusDrawer('Focus Drawer', FocusDrawerComponent, FocusDrawerAdvanced);
 
 const getRoutes = () => {
     const goToBaseUrl = (nextRouterState, replace) => {
@@ -40,6 +58,13 @@ const getRoutes = () => {
                 <Route path="hoc/overlayControls">
                     <Route path="overlayModal" component={OverlaySample} />
                     <Route path="overlayDialog" component={OverlaySampleDialog} />
+                </Route>
+                <Route path="hoc/focusDrawer" component={FocusDrawer} />
+            </Route>
+            <Route path="routerStructure" component={StructureForFocusDrawer}>
+                <Route path="hoc">
+                    <Route path="focusDrawer" component={FocusDrawerAdvanced}/>
+                    <Route path="component" components={focusDrawerBasic}/>
                 </Route>
             </Route>
             <Route path="*" onEnter={goToBaseUrl} />
