@@ -9,6 +9,7 @@ import {createLogger} from 'redux-logger';
 import {reducer as formReducer} from 'redux-form';
 import {routerMiddleware, routerReducer} from 'react-router-redux';
 import {browserHistory} from 'react-router';
+import actionLogger from '../utils/middleware';
 
 const loadDefaultReducers = () => combineReducers({
     form: formReducer,
@@ -22,6 +23,7 @@ const configureStore = ({
         thunk,
         createLogger({collapsed: true}),
         routerMiddleware(browserHistory),
+        actionLogger
     ],
 }) => (
     createStore(

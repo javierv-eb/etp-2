@@ -16,6 +16,8 @@ import OverlaySampleDialog from '../components/hoc/OverlaySampleDialog';
 import FocusDrawer from '../components/hoc/FocusDrawer';
 import FocusDrawerAdvanced from '../components/hoc/FocusDrawerAdvanced';
 import FocusDrawerComponent from '../components/hoc/FocusDrawerComponent';
+import ReduxFormBasic from '../components/forms/basic/BasicForm';
+import ReduxFormBasic2 from '../components/forms/basic/BasicForm2';
 
 const BASE_URL = '/';
 
@@ -66,6 +68,10 @@ const getRoutes = () => {
                     <Route path="focusDrawer" component={FocusDrawerAdvanced}/>
                     <Route path="component" components={focusDrawerBasic}/>
                 </Route>
+            </Route>
+            <Route path="reduxForm" component={StructureWithHOC}>
+                <Route path="basic" component={ReduxFormBasic} />
+                <Route path="basic2" component={ReduxFormBasic2} />
             </Route>
             <Route path="*" onEnter={goToBaseUrl} />
         </Route>
