@@ -18,6 +18,7 @@ import FocusDrawerAdvanced from '../components/hoc/FocusDrawerAdvanced';
 import FocusDrawerComponent from '../components/hoc/FocusDrawerComponent';
 import ReduxFormBasic from '../components/forms/basic/BasicForm';
 import ReduxFormBasic2 from '../components/forms/basic/BasicForm2';
+import ReduxFormValidation from '../components/forms/validations';
 
 const BASE_URL = '/';
 
@@ -72,6 +73,7 @@ const getRoutes = () => {
             <Route path="reduxForm" component={StructureWithHOC}>
                 <Route path="basic" component={ReduxFormBasic} />
                 <Route path="basic2" component={ReduxFormBasic2} />
+                <Route path="validations" component={ReduxFormValidation} />
             </Route>
             <Route path="*" onEnter={goToBaseUrl} />
         </Route>

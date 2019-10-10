@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import ClassNames from 'classnames';
 import Button from "eventbrite_design_system/button/Button";
 import InputField from 'eventbrite_design_system/inputField/InputField';
 import SelectField from 'eventbrite_design_system/inputField/SelectField';
@@ -19,10 +19,27 @@ export default class FormComponent extends Component {
         }
     }
     render() {
+        const {
+            isSmall = true,
+        } = this.props;
+        const formClasses = ClassNames(
+            'eds-g-cell',
+            'eds-g-cell-1-1',
+            {
+                'eds-g-cell-mn-1-2': isSmall,
+            },
+            'eds-l-pad-top-4',
+            'eds-l-lg-pad-right-4',
+            'eds-l-ln-pad-right-4',
+            'eds-l-lw-pad-right-4',
+            'eds-l-md-pad-right-4',
+            'eds-l-mn-pad-right-4',
+            'eds-l-mw-pad-right-4'
+        )
         return (
             <form 
                 onSubmit={this.handleSubmit}
-                className="eds-g-cell eds-g-cell-1-1 eds-g-cell-mn-1-2 eds-l-pad-top-4 eds-l-lg-pad-right-4 eds-l-ln-pad-right-4 eds-l-lw-pad-right-4 eds-l-md-pad-right-4 eds-l-mn-pad-right-4 eds-l-mw-pad-right-4"
+                className={formClasses}
             >
                 <div>
                     <div>
@@ -60,7 +77,7 @@ export default class FormComponent extends Component {
                                     },
                                     {
                                         value: 'second',
-                                        display: 'second',
+                                        display: 'Run multiple validations',
                                     },
                                 ]}
                                 style={STYLE_BASIC}
