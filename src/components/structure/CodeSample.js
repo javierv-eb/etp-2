@@ -45,16 +45,12 @@ export default class CodeSample extends Component {
     
     render() {
         return (
-            <>
-                {this.props.children}
-                
-                <CodeSegment
-                    show={this.state.show}
-                    code={this.props.code}
-                    onToggleCode={this.handleShowCode}
-                    addExtraPadding={this.props.extraPadding}
-                />
-            </>
+            <CodeSegment
+                show={this.state.show}
+                code={this.props.code}
+                onToggleCode={this.handleShowCode}
+                addExtraPadding={this.props.extraPadding}
+            />
         );
     }
 }

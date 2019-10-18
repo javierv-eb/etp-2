@@ -7,9 +7,9 @@ import BlueMoneyIllustrationSvg from 'eventbrite_design_system/iconography/icons
 import AlertChunkySvg from "eventbrite_design_system/iconography/icons/AlertChunky";
 import { TYPE_ERROR } from "eventbrite_design_system/notification/constants";
 
-import CodeSampler from '../CodeSampler';
 //eslint-disable-next-line
 import OverlaySamplejsx from '!raw-loader!./OverlaySample.jsx';
+import Structure from "../structure/Structure";
 
 const ModalContent = ({ onShowNotification }) => (
     <div className=" eds-g-cell eds-g-cell-1-1 eds-l-pad-top-2 eds-l-pad-vert-2">
@@ -20,6 +20,32 @@ const ModalContent = ({ onShowNotification }) => (
             </Button>
         </div>
     </div>
+);
+
+const OverlaySampleComponent = ({
+    onShowOverlay
+}) => (
+        <>
+            <div className="eds-align--space-between eds-avatar__background--has-border">
+                <div>
+                    <Illustration
+                        type={<BlueMoneyIllustrationSvg />}
+                        height="420px"
+                        width="220px"
+                    />
+                </div>
+                <div className="eds-g-cell eds-g-cell-8-12 eds-l-pad-left-10 eds-l-pad-top-10">
+                    <ModalContent />
+                </div>
+            </div>
+
+            <div className="eds-align--space-between eds-l-pad-top-10">
+                {/* eslint-disable-next-line */}
+                <Button style="fill" onClick={onShowOverlay}>
+                    Show Modal!!!
+                </Button>
+            </div>
+        </>
 );
 
 class OverlaySample extends Component {
@@ -52,37 +78,19 @@ class OverlaySample extends Component {
     }
     render() {
         return (
-            <>
-                <section className="eds-l-pad-top-10">
-                    <CodeSampler code={OverlaySamplejsx}>
-                        <h1 className="eds-align--center-vertical">Overlay</h1>
-                        <div className="eds-l-pad-vert-10">
-                            <p className="eds-text-bm--fixed">
-                                • Press the show modal button to check modal
-                            </p>
-                        </div>
-                        <div className="eds-align--space-between eds-avatar__background--has-border">
-                            <div>
-                            <Illustration
-                                type={<BlueMoneyIllustrationSvg />}
-                                height="420px"
-                                width="220px"
-                            />
-                            </div>
-                            <div className="eds-g-cell eds-g-cell-8-12 eds-l-pad-left-10 eds-l-pad-top-10">
-                                <ModalContent />
-                            </div>
-                        </div>
-
-                        <div className="eds-align--space-between eds-l-pad-top-10">
-                        {/* eslint-disable-next-line */}
-                            <Button style="fill" onClick={() => this.handleShowOverlay()}>
-                                Show Modal!!!
-                            </Button>
-                        </div>
-                    </CodeSampler>
-                </section>
-            </>
+            <Structure
+                title={'Overlay'}
+                comments={['Press the show modal button to check modal']}
+                Component={
+                    OverlaySampleComponent.bind(
+                        null,
+                        {
+                            onShowOverlay : this.handleShowOverlay,
+                        }
+                    )
+                }
+                code={OverlaySamplejsx}
+            />
         );
     }
 }

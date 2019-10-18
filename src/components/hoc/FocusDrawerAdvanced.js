@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import {browserHistory} from 'react-router';
 import Button from "eventbrite_design_system/button/Button";
 
-import CodeSampler from '../CodeSampler';
 //eslint-disable-next-line
 import FocusDrawerjsx from '!raw-loader!./FocusDrawerComponents.jsx';
+import Structure from "../structure/Structure";
 
 class FocusDrawerAdvanced extends Component {
     
@@ -14,31 +14,21 @@ class FocusDrawerAdvanced extends Component {
 
     render() {
         return (
-            <>
-                <section className="eds-l-pad-top-10">
-                    <CodeSampler code={FocusDrawerjsx}>
-                        <h1 className="eds-align--center-vertical">Router & Focus Drawer exercise</h1>
-                        <div className="eds-l-pad-vert-10">
-                            <p className="eds-text-bm--fixed">
-                                • Use of focusDrawer
-                            </p>
-                            <p className="eds-text-bm--fixed">
-                                • Use of react-router
-                            </p>
-                            <p className="eds-text-bm--fixed">
-                                • Use of redux
-                            </p>
-   
-                        </div>
+            <Structure
+                title={'Router & Focus Drawer exercise'}
+                comments={['Use of focusDrawer', 'Use of react-router', ' Use of redux']}
+                Component={
+                    () => (
                         <div className="eds-l-pad-top-2">
                             {/* eslint-disable-next-line */}
                             <Button style="fill" size="block" onClick={() => this.navigate()}>
                                 Show Focus Drawer
                             </Button>
                         </div>
-                    </CodeSampler>
-                </section>
-            </>
+                    )
+                }
+                code={FocusDrawerjsx}
+            />
         );
     }
 }

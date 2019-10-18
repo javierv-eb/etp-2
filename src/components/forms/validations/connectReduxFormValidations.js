@@ -31,5 +31,5 @@ export default flowRight(
         form: 'validateForm',
         validate,
     }),
-    validationBasic.bind(null, 'Redux Form Validations', 'Play with the fields to trigger validations'),
+    validationBasic.bind(null, 'Redux Form Validations', ['Play with the fields to trigger validations']),
 )(ValidationFormComponent);

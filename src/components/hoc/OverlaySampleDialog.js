@@ -4,10 +4,20 @@ import withOverlayControls from "eventbrite_design_system/structure/hoc/withOver
 import Button from "eventbrite_design_system/button/Button";
 import TrashSvg from "eventbrite_design_system/iconography/icons/TrashChunky";
 
-import CodeSampler from '../CodeSampler';
 //eslint-disable-next-line
 import OverlaySamplejsx from '!raw-loader!./OverlaySampleDialog.jsx';
+import Structure from "../structure/Structure";
 
+const OverlaySampleComponent = ({
+    onShowOverlayDialog
+}) => (
+        <div className="eds-align--space-between eds-l-pad-top-10">
+            {/* eslint-disable-next-line */}
+            <Button style="fill" onClick={onShowOverlayDialog}>
+                Show Dialog!!!
+            </Button>
+        </div>
+)
 class OverlaySample extends Component {
     handleShowOverlayDialog = () => {
         this.props.showOverlay(
@@ -25,25 +35,19 @@ class OverlaySample extends Component {
     }
     render() {
         return (
-            <>
-                <section className="eds-l-pad-top-10">
-                    <CodeSampler code={OverlaySamplejsx}>
-                        <h1 className="eds-align--center-vertical">Overlay</h1>
-                        <div className="eds-l-pad-vert-10">
-                            <p className="eds-text-bm--fixed">
-                                • Press the show dialog button to check dialog
-                        </p>
-                        </div>
-
-                        <div className="eds-align--space-between eds-l-pad-top-10">
-                        {/* eslint-disable-next-line */}
-                            <Button style="fill" onClick={() => this.handleShowOverlayDialog()}>
-                                Show Dialog!!!
-                            </Button>
-                        </div>
-                    </CodeSampler>
-                </section>
-            </>
+            <Structure
+                title={'Overlay Dialog'}
+                comments={['Press the show modal button to check dialog']}
+                Component={
+                    OverlaySampleComponent.bind(
+                        null,
+                        {
+                            onShowOverlayDialog : this.handleShowOverlayDialog,
+                        }
+                    )
+                }
+                code={OverlaySamplejsx}
+            />
         );
     }
 }
