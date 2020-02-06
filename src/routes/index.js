@@ -19,6 +19,7 @@ import FocusDrawerComponent from '../components/hoc/FocusDrawerComponent';
 import ReduxFormBasic from '../components/forms/basic/BasicForm';
 import ReduxFormBasic2 from '../components/forms/basic/BasicForm2';
 import ReduxFormValidation from '../components/forms/validations';
+import FormTemplate from '../containers/connectFormTemplate';
 
 const BASE_URL = '/';
 
@@ -74,6 +75,9 @@ const getRoutes = () => {
                 <Route path="basic" component={ReduxFormBasic} />
                 <Route path="basic2" component={ReduxFormBasic2} />
                 <Route path="validations" component={ReduxFormValidation} />
+            </Route>
+            <Route path="advanced" component={StructureWithHOC}>
+                <Route path="templateBuilder" component={FormTemplate} />
             </Route>
             <Route path="*" onEnter={goToBaseUrl} />
         </Route>
