@@ -11,9 +11,12 @@ import {routerMiddleware, routerReducer} from 'react-router-redux';
 import {browserHistory} from 'react-router';
 import actionLogger from '../utils/middleware';
 
+import formTemplateReducer from './formTemplate';
+
 const loadDefaultReducers = () => combineReducers({
     form: formReducer,
     routing: routerReducer,
+    formTemplate: formTemplateReducer,
 });
 
 const configureStore = ({

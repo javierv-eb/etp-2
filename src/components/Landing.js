@@ -69,6 +69,11 @@ const formItems = [
         content: 'Redux Form with validation',
         value: 'reduxForm/validations',
         iconType: <MapSvg />,
+    },
+    {
+        content: 'Redux integration sample',
+        value: 'advanced/templateBuilder',
+        iconType: <MapSvg />,
     }
 ]
 
