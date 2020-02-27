@@ -8,11 +8,19 @@ import Structure from "../structure/Structure";
 
 class FocusDrawerAdvanced extends Component {
     
-    navigate = (route) => {
-        browserHistory.push('/routerStructure/hoc/component');
+    navigate = (renderCode) => {
+        if (renderCode) {
+            browserHistory.push('/routerStructure/hoc/component');
+        } else {
+            browserHistory.push('/v2/exercises/focus-drawer-component/#position=2');
+        }
     };
 
     render() {
+        const {
+            renderCode = true,
+        } = this.props;
+
         return (
             <Structure
                 title={'Router & Focus Drawer exercise'}
@@ -21,13 +29,13 @@ class FocusDrawerAdvanced extends Component {
                     () => (
                         <div className="eds-l-pad-top-2">
                             {/* eslint-disable-next-line */}
-                            <Button style="fill" size="block" onClick={() => this.navigate()}>
+                            <Button style="fill" size="block" onClick={() => this.navigate(renderCode)}>
                                 Show Focus Drawer
                             </Button>
                         </div>
                     )
                 }
-                code={FocusDrawerjsx}
+                code={renderCode ? FocusDrawerjsx : null}
             />
         );
     }

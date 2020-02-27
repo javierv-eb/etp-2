@@ -28,39 +28,43 @@ const NotificationSample = ({
                 </Button>
             </div>
         </>
-);
+    );
 
 class Notifications extends Component {
-  handleMainNotification = () => {
-    this.props.addMainNotification({
-      type: TYPE_ERROR,
-      children: "This an error notification",
-      iconType: <AlertChunkySvg />,
-      shouldScrollTo: true,
-      hasCloseButton: true
-    });
-  }
-  handleHideNotification = () => {
-      this.props.hideMainNotification();
-  }
-  render() {
-    return (
-        <Structure
-            title={'Notification exercise'}
-            comments={['Press the show button to show top notification', 'Press the hide button to close it or wait']}
-            Component={
-                NotificationSample.bind(
-                    null,
-                    {
-                        onMainNotification : this.handleMainNotification,
-                        onHideMainNotification: this.handleHideNotification
-                    }
-                )
-            }
-            code={Notificationjsx}
-        />
-    );
-  }
+    handleMainNotification = () => {
+        this.props.addMainNotification({
+            type: TYPE_ERROR,
+            children: "This an error notification",
+            iconType: <AlertChunkySvg />,
+            shouldScrollTo: true,
+            hasCloseButton: true
+        });
+    }
+    handleHideNotification = () => {
+        this.props.hideMainNotification();
+    }
+    render() {
+        const {
+            renderCode = true,
+        } = this.props;
+
+        return (
+            <Structure
+                title={'Notification exercise'}
+                comments={['Press the show button to show top notification', 'Press the hide button to close it or wait']}
+                Component={
+                    NotificationSample.bind(
+                        null,
+                        {
+                            onMainNotification: this.handleMainNotification,
+                            onHideMainNotification: this.handleHideNotification
+                        }
+                    )
+                }
+                code={renderCode ? Notificationjsx : null}
+            />
+        );
+    }
 }
 
 export default withMainControls(Notifications);

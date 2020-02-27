@@ -49,7 +49,7 @@ class BasicForm2 extends Component {
     render() {
         return (
             <Structure
-                title={'Redux Form Basic II'}
+                title={'Redux Form Basic'}
             >
                 <div style={{ display: 'flex' }}>
                     <BasicFormComponent

@@ -8,11 +8,11 @@ import validationsJSX from '!raw-loader!./validations.jsx';
 import Structure from '../../structure/Structure';
 
 const withValidationBasic = (title, message, Component) => {
-    return (props) => (
+    const ValidationBasic = (props) => (
         <Structure
                 title={title}
                 comments={[...message]}
-                code={validationsJSX}
+                code={props.renderCode ? validationsJSX : null}
         >
             <div>
                 <Component {...props} />
@@ -23,7 +23,13 @@ const withValidationBasic = (title, message, Component) => {
                 </div>
             </div>
         </Structure>
-    )
+    );
+
+    ValidationBasic.defaultProps = {
+        renderCode: true,
+    };
+
+    return ValidationBasic;
 };
 
 export default withValidationBasic;

@@ -49,7 +49,6 @@ const FormStructure = ({name, fields}) => {
     const transformedFields = fields.map(
         (field) => {
             const CurrentField = FORM_ELEMENTS[field.type];
-            debugger;
             return (
                 <div className="eds-g-cell eds-g-cell-1-1 eds-l-pad-vert-4" key={field.id}>
                     <ValidationFormField

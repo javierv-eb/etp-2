@@ -77,6 +77,10 @@ class OverlaySample extends Component {
         );
     }
     render() {
+        const {
+            renderCode = true,
+        } = this.props;
+        
         return (
             <Structure
                 title={'Overlay'}
@@ -89,7 +93,7 @@ class OverlaySample extends Component {
                         }
                     )
                 }
-                code={OverlaySamplejsx}
+                code={renderCode ? OverlaySamplejsx : null}
             />
         );
     }

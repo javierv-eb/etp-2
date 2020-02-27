@@ -3,7 +3,6 @@ import isEmpty from 'lodash/isEmpty';
 
 import ValidationFormField from 'eventbrite_design_system/validationFormField/ValidationFormField';
 import {
-    STYLE_STATIC,
     STYLE_BASIC,
 } from 'eventbrite_design_system/inputField/constants';
 import SelectField from 'eventbrite_design_system/inputField/SelectField';
