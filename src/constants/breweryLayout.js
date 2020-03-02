@@ -1,9 +1,3 @@
-// export const EDS_MODAL_INFO = {
-//     modalInfo: [],
-//     guideInfo: [],
-//     resolutionInfo: [],
-// };
-
 import breweryLayout from '../assets/img/brewery-layout.png'
 
 import { addHtml } from './utils';

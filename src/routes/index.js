@@ -212,6 +212,15 @@ const getRoutes = () => {
                             })
                         }
                     />
+                    <Route
+                        path="brewery-final"
+                        component={
+                            withDocs({
+                                guide: breweryConstants.GUIDE_INFO.breweryFinal,
+                                resolution: breweryConstants.RESOLUTION_INFO.breweryFinal
+                            })
+                        }
+                    />
                 </Route>
             </Route>
             <Route path="ex1" component={Ex1}/>

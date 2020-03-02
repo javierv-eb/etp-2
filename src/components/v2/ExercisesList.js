@@ -129,6 +129,13 @@ const breweriesItems = [
         title: 'Enhance Brewery Layout',
         steps: BREWERY_INFO.breweryLayout2,
     },
+    {
+        content: 'Brewery - Final',
+        value: 'v2/exercises/brewery-final',
+        iconType: <ReactChunkySvg />,
+        title: 'Enhance Brewery Layout',
+        steps: BREWERY_INFO.breweryFinal,
+    },
 ];
 
 const allItems = [...edsHOCItems, ...reduxItems, ...reduxFormItems, ...breweriesItems];
