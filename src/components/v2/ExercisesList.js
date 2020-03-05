@@ -231,6 +231,10 @@ class ExercisesList extends React.Component {
                 >
                     <TextList items={breweriesItems} onItemSelect={this.handleNavigation}/>
                 </ExpansionPanel>
+                 {/* eslint-disable-next-line */}
+                <a style={{ position: 'absolute', top: '-29px', right: '0', }} className="eds-l-pad-top-20 eds-l-pad-bot-20" onClick={() => {
+                    browserHistory.push('/v1');
+                }}>Old exercies</a>
             </section>
         )
     }

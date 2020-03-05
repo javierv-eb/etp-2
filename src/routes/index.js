@@ -65,9 +65,13 @@ const getRoutes = () => {
 
     return (
         <Route path={BASE_URL}>
-            <IndexRoute component={Page} />
-            <Route path="v2">
+            <Route path="v1">
+                <IndexRoute component={Page} />
+            </Route>
+            <Route>
                 <IndexRoute component={Page2} />
+            </Route>
+            <Route path='v2'>
                 <Route path="exercises" component={StructureForFocusDrawer}>
                     <Route
                         path="redux-basic"

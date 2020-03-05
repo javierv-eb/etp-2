@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { browserHistory } from 'react-router';
 
 const OVERVIEW_TIPS = [
     'Provide an usefull set of React exercises',
@@ -27,6 +28,11 @@ const USEFUL_LINKS = [
 ];
 
 export default class Overview extends PureComponent {
+    handleNavigate = () => {
+        browserHistory.push('/v1');
+    };
+
+
     render () {
         return (
             <section className="eds-best-practices eds-l-mar-vert-10" data-spec="eds-best-practices">
@@ -42,6 +48,8 @@ export default class Overview extends PureComponent {
                         </li>
                     ))}
                 </ul>
+                {/* eslint-disable-next-line */}
+                <a style={{position: 'absolute', top: '-29px', right: '0',}} className="eds-l-pad-top-20 eds-l-pad-bot-20" onClick={this.handleNavigate}>Old exercies</a>
             </section>
         );
     }
