@@ -24,8 +24,8 @@ import FormTemplateBuilderModal from '../../../containers/connectFormTemplateBui
 
 const AddNewSection = ({onNewSection}) => (
     <div className="eds-align--right">
-        <Button
-            style="anchor"
+    {/* eslint-disable-next-line */}
+        <Button style="anchor"
             size="responsive"
             onClick={onNewSection}
         >
@@ -225,8 +225,8 @@ class FormTemplateBuilder extends React.PureComponent {
                                     Clean Form
                                 </Button>
                             </div>
-                            <Button
-                                style="fill"
+                            {/* eslint-disable-next-line */}
+                            <Button style="fill"
                                 size="responsive"
                                 onClick={this.props.handleSubmit}
                             >

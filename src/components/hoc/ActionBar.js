@@ -49,6 +49,10 @@ class ActionBar extends Component {
       this.props.closeMainBottomBar();
   }
   render() {
+    const {
+        renderCode = true,
+    } = this.props;
+
     return (
         <Structure
             title={'Action Bar exercise'}
@@ -62,7 +66,7 @@ class ActionBar extends Component {
                     }
                 )
             }
-            code={ActionBarjsx}
+            code={renderCode ? ActionBarjsx : null}
         />
     );
   }

@@ -38,6 +38,9 @@ class BasicForm extends Component {
         this.setState({response: JSON.stringify(formData, null, 4)});
     }
     render() {
+        const {
+            renderCode = true,
+        } = this.props;
         return (
             <Structure
                 title={'Redux Form Basic'}
@@ -51,7 +54,7 @@ class BasicForm extends Component {
                         }
                     )
                 }
-                code={BasicFormJSX}
+                code={renderCode ? BasicFormJSX : null}
             />
         );
     }

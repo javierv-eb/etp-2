@@ -5,7 +5,7 @@ import PhabButton from 'eventbrite_design_system/phab/PhabButton';
 import CrossSvg from 'eventbrite_design_system/iconography/icons/RefreshChunky';
 import classNames from 'classnames';
 
-const CodeSegment = ({code, show, onToggleCode, addExtraPadding}) => {
+const CodeSegment = ({code, show, onToggleCode, addExtraPadding, hideLink}) => {
     if (!code) {
         return null;
     }
@@ -23,33 +23,44 @@ const CodeSegment = ({code, show, onToggleCode, addExtraPadding}) => {
             'eds-l-pad-hor-10': addExtraPadding,
         },
     );
-
-    return (
-        <>
+    const link = hideLink
+        ? null
+        : (
             <div className={classes}>
                 <h1 className="eds-l-pad-vert-10">Toggle JSX</h1>
                 <div className="eds-l-pad-top-6">
                     <PhabButton iconType={<CrossSvg />} onClick={() => onToggleCode()} size="small" />
                 </div>
             </div>
+        )
+
+    return (
+        <>
+            {link}
             {jsx}
         </>
     );
 };
 export default class CodeSample extends Component {
+    constructor(props) {
+        super(props);
 
-    state = {
-        show: false,
+        this.state = {
+            show: !!props.standAloneCode,
+        }
     }
     handleShowCode = () => this.setState(({show}) => ({show: !show}));
     
     render() {
+        const { standAloneCode, code } = this.props;
+
         return (
             <CodeSegment
                 show={this.state.show}
-                code={this.props.code}
+                code={code}
                 onToggleCode={this.handleShowCode}
                 addExtraPadding={this.props.extraPadding}
+                hideLink={standAloneCode}
             />
         );
     }
