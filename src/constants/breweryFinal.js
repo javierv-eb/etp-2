@@ -20,7 +20,8 @@ export const BREWERY_FINAL = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/b20867de89a64347600c86e35ba9786e1b54e698" target="_blank" rel="noopener noreferrer">here</a>`
                     }
-                }
+                },
+                addHtml(`Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/brewery-final" target="_blank" rel="noopener noreferrer">Brewery Final</a>`),
             ],
         }
     ],

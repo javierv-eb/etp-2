@@ -27,7 +27,12 @@ export const REDUX_FORM_BASIC = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/a2de76ebe2dfee4d73be986e5e3b1c2ad5ec0515" target="_blank" rel="noopener noreferrer">here</a>`
                     }
-                }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/redux-form-basic" target="_blank" rel="noopener noreferrer">Redux-Form Basic</a>`
+                    }
+                },
             ],
         }
     ],

@@ -18,7 +18,12 @@ export const BREWERY_LAYOUT = {
             prevStepsBlock: [
                 {
                     text: {
-                        __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/b20867de89a64347600c86e35ba9786e1b54e698" target="_blank" rel="noopener noreferrer">here</a>`
+                        __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/c40dcf1f90092fba04f6b399bc3bcee3e69e3dab" target="_blank" rel="noopener noreferrer">here</a>`
+                    }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/brewery-layout" target="_blank" rel="noopener noreferrer">Brewery Layout</a>`
                     }
                 }
             ],
@@ -249,7 +254,8 @@ export const BREWERY_LAYOUT_2 = {
         {
             keyReplace: 'bmil22',
             prevStepsBlock: [
-                addHtml(`Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/eea119a7cd924ae12b8eec7ee14ed284705b75fb" target="_blank" rel="noopener noreferrer">here</a>`)
+                addHtml(`Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/eea119a7cd924ae12b8eec7ee14ed284705b75fb" target="_blank" rel="noopener noreferrer">here</a>`),
+                addHtml(`Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/brewery-layout-2" target="_blank" rel="noopener noreferrer">Brewery Layout II</a>`),
             ],
         }
     ],

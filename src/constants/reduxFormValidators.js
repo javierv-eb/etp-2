@@ -26,6 +26,11 @@ export const REDUX_FORM_VALIDATORS = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/0776b8ea2938e818c3efa7dba53cd12494c65e8c" target="_blank" rel="noopener noreferrer">here</a>`
                     }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/redux-form-validators" target="_blank" rel="noopener noreferrer">Redux-Form Validators</a>`
+                    }
                 }
             ],
         }

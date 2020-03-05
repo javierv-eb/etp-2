@@ -16,6 +16,11 @@ const REDUX_BASIC = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/0620316462231d8bfb3a8b4c37418d6bace06e54" target="_blank" rel="noopener noreferrer">here</a>`
                     }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/development" target="_blank" rel="noopener noreferrer">Redux Basic</a>`
+                    }
                 }
             ],
         }
@@ -255,6 +260,11 @@ const REDUX_THUNK = {
                 {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/f25c93f33cfca495e26e401810671606ec68568e" target="_blank" rel="noopener noreferrer">here</a>`
+                    }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/redux-thunk-1" target="_blank" rel="noopener noreferrer">Redux Thunk</a>`
                     }
                 }
             ],
@@ -572,6 +582,11 @@ const REDUX_THUNK_2 = {
                 {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/eefada5efc9447ccebe8a5bd1a29146d65ff72ef" target="_blank" rel="noopener noreferrer">here</a>`
+                    }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/redux-thunk-2" target="_blank" rel="noopener noreferrer">Redux Thunk II</a>`
                     }
                 }
             ],

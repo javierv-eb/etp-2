@@ -45,6 +45,11 @@ export const EDS_FOCUS_DRAWER = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/6d3079d7a9ee8dec73cf909efded936d4dc037ab" target="_blank" rel="noopener noreferrer">here</a>`
                     }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/eds-focus-drawer" target="_blank" rel="noopener noreferrer">Focus Drawer</a>`
+                    }
                 }
             ],
         }

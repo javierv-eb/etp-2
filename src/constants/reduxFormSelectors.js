@@ -23,6 +23,11 @@ export const REDUX_FORM_SELECTORS = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/91b99e2d8bb7c3e4efae8470ccac2337f9fd5503" target="_blank" rel="noopener noreferrer">here</a>`
                     }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/redux-form-selectors" target="_blank" rel="noopener noreferrer">Redux-Form Selectors</a>`
+                    }
                 }
             ],
         }

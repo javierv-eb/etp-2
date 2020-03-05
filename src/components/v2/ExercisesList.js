@@ -6,6 +6,9 @@ import TextList from 'eventbrite_design_system/textList/TextList';
 import CodeChunkySvg from 'eventbrite_design_system/iconography/icons/CodeChunky';
 import withOverlayControls from 'eventbrite_design_system/structure/hoc/withOverlayControls';
 import ReactChunkySvg from 'eventbrite_design_system/iconography/icons/ReactChunky';
+import AlertChunkySvg from 'eventbrite_design_system/iconography/icons/AlertChunky';
+import Icon from 'eventbrite_design_system/icon/Icon';
+import withTooltip from 'eventbrite_design_system/tooltip/withTooltip';
 
 import ExercisesListFragment from './GenericPageFragment';
 
@@ -14,23 +17,47 @@ import { EDS_MODAL_INFO } from '../../constants/eds';
 import { REDUX_FORM_INFO } from '../../constants/reduxForm';
 import { BREWERY_INFO } from '../../constants/brewery';
 
+const IconWithTooltip = withTooltip(Icon);
+
+const CustomContent = ({ text, isRequired}) => isRequired ? (
+    <div className="eds-align--space-between">
+        <p>{text}</p>
+        <div>
+            <IconWithTooltip
+                type={<AlertChunkySvg />}
+                size="small"
+                tooltipStyle="basic"
+                tooltipText={
+                    <div style={{ maxWidth: '360px' }}>
+                        Exercise Required!!!
+                    </div>
+                }
+                tooltipArrowLocation="bottom"
+                color='ui-red'
+                tooltipId={text}
+            />
+        </div>
+            
+    </div>
+) : <p>{text}</p>;
+
 const reduxItems = [
     {
-        content: 'Basic React Redux exercise',
+        content: <CustomContent text='Basic React Redux exercise'/>,
         value: 'v2/exercises/redux-basic',
         iconType: <ReactChunkySvg />,
         title: 'Redux Basic exercise',
         steps: MODAL_INFO['redux-basic'],
     },
     {
-        content: 'Working with thunk middleware',
+        content: <CustomContent text='Working with thunk middleware' isRequired/>,
         value: 'v2/exercises/redux-thunk',
         title: 'Redux Thunk basic exercise',
         iconType: <ReactChunkySvg />,
         steps: MODAL_INFO['redux-thunk'],
     },
     {
-        content: 'Enhance the thunk exercise',
+        content: <CustomContent text='Enhance the thunk exercise' isRequired/>,
         title: 'Redux Thunk enhance',
         value: 'v2/exercises/redux-thunk-2',
         iconType: <ReactChunkySvg />,
@@ -68,7 +95,7 @@ const edsHOCItems = [
         steps: EDS_MODAL_INFO.overlayControlsModal,
     },
     {
-        content: 'Focus Drawer Controls',
+        content: <CustomContent text='Focus Drawer Controls' isRequired/>,
         value: 'v2/exercises/focus-drawer',
         iconType: <CodeChunkySvg />,
         title: 'Focus Drawer',
@@ -78,7 +105,7 @@ const edsHOCItems = [
 
 const reduxFormItems = [
     {
-        content: 'Redux Form Basic',
+        content: <CustomContent text='Redux Form Basic' isRequired/>,
         value: 'v2/exercises/redux-form-basic',
         iconType: <ReactChunkySvg />,
         title: 'Redux Form Basic',
@@ -106,7 +133,7 @@ const reduxFormItems = [
         steps: REDUX_FORM_INFO.reduxFormSelector,
     },
     {
-        content: 'Redux Form - Validators',
+        content: <CustomContent text='Redux Form - Validators' isRequired/>,
         value: 'v2/exercises/redux-form-validators',
         iconType: <ReactChunkySvg />,
         title: 'Redux Form Validators',
@@ -130,7 +157,7 @@ const breweriesItems = [
         steps: BREWERY_INFO.breweryLayout2,
     },
     {
-        content: 'Brewery - Final',
+        content: <CustomContent text='Brewery - Final' isRequired/>,
         value: 'v2/exercises/brewery-final',
         iconType: <ReactChunkySvg />,
         title: 'Enhance Brewery Layout',

@@ -43,6 +43,11 @@ export const OVERLAY_CONTROLS_DIALOG = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/614f8fe84c552da79696c46de6a0624cd34b71b8" target="_blank" rel="noopener noreferrer">here</a>`
                     }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/eds-dialog" target="_blank" rel="noopener noreferrer">Dialog</a>`
+                    }
                 }
             ],
         }
@@ -242,6 +247,11 @@ export const OVERLAY_CONTROLS_MODAL = {
                 {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/1035d47bb0c7bf4e4fad8e4cb429041a35b1c73b" target="_blank" rel="noopener noreferrer">here</a>`
+                    }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/eds-modal" target="_blank" rel="noopener noreferrer">Modal</a>`
                     }
                 }
             ],

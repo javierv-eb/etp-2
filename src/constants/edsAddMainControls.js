@@ -43,6 +43,11 @@ export const MAIN_CONTROLS_NOTIFICATION = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/b41a213c115fd5d5cbbb1c3f3523e9283c9a4eac" target="_blank" rel="noopener noreferrer">here</a>`
                     }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/eds-notification" target="_blank" rel="noopener noreferrer">Notifications</a>`
+                    }
                 }
             ],
         }
@@ -263,6 +268,11 @@ export const MAIN_CONTROLS_ACTION_BAR = {
                     text: {
                         __html:
                             'Please check <a href="https://github.com/eventbrite/eventbrite_design_system/blob/master/library/src/structure/hoc/withMainControls.js" target="_blank" rel="noopener noreferrer">withMainControls</a>'
+                    }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/eds-action-bar" target="_blank" rel="noopener noreferrer">Action Bar</a>`
                     }
                 }
             ]

@@ -23,6 +23,12 @@ export const REDUX_FORM_INIT = {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/d7acec7425d552010dd33650124c1065c3df7035" target="_blank" rel="noopener noreferrer">here</a>`
                     }
+                },
+                
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/redux-form-init-state" target="_blank" rel="noopener noreferrer">Redux-Form Init State</a>`
+                    }
                 }
             ],
         }
@@ -125,6 +131,11 @@ export const REDUX_FORM_INIT_ACTION_CREATOR = {
                 {
                     text: {
                         __html: `Check current exercise <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commit/f73b2272da8c785f4961d385a6a88536b163115f" target="_blank" rel="noopener noreferrer">here</a>`
+                    }
+                },
+                {
+                    text: {
+                        __html: `Checkout current branch <a href="https://github.com/javierv-eb/etp-fe-exercise-resolution/commits/redux-form-init-action-creator" target="_blank" rel="noopener noreferrer">Redux-Form Initialization via action creator</a>`
                     }
                 }
             ],
